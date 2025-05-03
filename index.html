@@ -1,32 +1,99 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Benvenuto su GitHub Pages</title>
+  <title>Safe Block - Validators</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 50px;
-      background: #f0f0f0;
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    h1 {
-      color: #2c3e50;
+    .logo-img {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
     }
-    p {
+    .logo {
+      font-weight: bold;
       font-size: 1.2em;
     }
-    a {
-      color: #2980b9;
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-left: 10px;
+    }
+    .social-icons img {
+      width: 20px;
+      height: 20px;
+      filter: invert(100%); /* renderizza le icone bianche */
+    }
+    nav a {
+      color: #bbb;
+      margin-left: 15px;
       text-decoration: none;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em 2em;
+      background-color: #121212;
+      flex-wrap: wrap;
+    }
+    .left-header {
+      display: flex;
+      align-items: center;
     }
   </style>
 </head>
 <body>
-  <h1>🎉 Il tuo sito è online!</h1>
-  <p>Questa è una pagina statica hostata con <strong>GitHub Pages</strong>.</p>
-  <p>Modifica il file <code>index.html</code> per personalizzare il tuo sito.</p>
-  <p><a href="https://pages.github.com/" target="_blank">Scopri di più su GitHub Pages</a></p>
+  <header>
+    <div class="left-header">
+      <div class="logo-container">
+        <img src="https://raw.githubusercontent.com/cosmostation/chainlist/main/chain/bitsong/moniker/bitsongvaloper1fgmzy5rtvvnxzy0vn54mz9k5xndzt2afepyye3.png" alt="Safe Block Logo" class="logo-img">
+        <div class="logo">SAFE BLOCK</div>
+      </div>
+      <div class="social-icons">
+        <a href="https://t.me/z0xfr3nk" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram">
+        </a>
+        <a href="https://x.com/safeblockspace" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter">
+        </a>
+      </div>
+    </div>
+    <nav>
+      <a href="https://docs.safeblock.space" target="_blank">Docs</a>
+      <a href="https://snapshot.safeblock.space" target="_blank">Snapshots</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Benvenuti</h1>
+    <p>Questa è la nostra pagina per validatori <strong>Safe Block</strong>.</p>
+    <div class="validators">
+      <div class="validator-card">
+        <img src="https://raw.githubusercontent.com/cosmos/chain-registry/master/bitsong/images/btsg.png" alt="BitSong Logo" class="chain-logo">
+        <h2>Safe Block</h2>
+        <p>Chain: BitSong</p>
+        <a href="https://restake.app/bitsong/bitsongvaloper1fgmzy5rtvvnxzy0vn54mz9k5xndzt2afepyye3/stake" class="btn" target="_blank">Delegare</a>
+      </div>
+      <div class="validator-card">
+        <img src="https://raw.githubusercontent.com/cosmos/chain-registry/master/planq/images/planq.png" alt="Planq Logo" class="chain-logo">
+        <h2>Safe Block</h2>
+        <p>Chain: Planq</p>
+        <a href="https://restake.app/planq/plqvaloper1r3j34ch40555kgukc7xy8u45jnr3rnpapslpk7/stake" class="btn" target="_blank">Delegare</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Safe Block</p>
+  </footer>
 </body>
 </html>

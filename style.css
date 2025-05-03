@@ -1,0 +1,90 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0e0e0e;
+  color: #fff;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background-color: #121212;
+}
+
+header .logo {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+nav a {
+  color: #bbb;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+main {
+  padding: 2em 1em;
+}
+
+.validators {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.validator-card {
+  background-color: #1e1e1e;
+  padding: 1.5em;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 0 10px #000;
+}
+
+.chain-logo {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1em;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.6em 1.2em;
+  background-color: #1f75fe;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  background-color: #5599ff;
+}
+
+footer {
+  margin-top: 3em;
+  padding: 1em;
+  background-color: #121212;
+  font-size: 0.9em;
+  color: #777;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
