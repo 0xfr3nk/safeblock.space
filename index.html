@@ -208,13 +208,15 @@
     <div class="validators">
       <div class="validator-card" id="bitsong-card">
         <img src="https://raw.githubusercontent.com/cosmos/chain-registry/master/bitsong/images/btsg.png" alt="BitSong Logo" class="chain-logo">
-        <h2>BitSong</h2>
+        <h2>BitSong Network</h2>
+		<h3>$BTSG</h3>
         <a href="https://restake.app/bitsong/bitsongvaloper1fgmzy5rtvvnxzy0vn54mz9k5xndzt2afepyye3/stake" class="btn" target="_blank">Delegate Now</a>
         <div class="validator-data" id="bitsong-data">Caricamento dati...</div>
       </div>
       <div class="validator-card" id="planq-card">
         <img src="https://raw.githubusercontent.com/cosmos/chain-registry/master/planq/images/planq.png" alt="Planq Logo" class="chain-logo">
-        <h2>Planq</h2>
+        <h2>Planq Network</h2>
+		<h3>$PLQ</h3>
         <a href="https://restake.app/planq/plqvaloper1r3j34ch40555kgukc7xy8u45jnr3rnpapslpk7/stake" class="btn" target="_blank">Delegate Now</a>
         <div class="validator-data" id="planq-data">Caricamento dati...</div>
       </div>
@@ -249,7 +251,7 @@
           <p><strong title='Indirizzo validatore'>Operator:</strong> ${v.operator_address}</p>
           <p><strong title='Se true, il validatore è stato escluso temporaneamente'>Jailed:</strong> ${v.jailed}</p>
           <p><strong title='Stato attuale del validatore'>Status:</strong> ${statusText}</p>
-          <p><strong title='Token delegati al validatore'>Tokens:</strong> ${tokens} delegati</p>
+          <p><strong title='Token delegati al validatore'>Tokens:</strong> ${tokens} Delegated</p>
           <p><strong title='Commissione attuale trattenuta'>Commission:</strong> ${(parseFloat(v.commission.commission_rates.rate) * 100).toFixed(2)}%</p>
           <p><strong title='Massima commissione impostabile'>Max Commission:</strong> ${(parseFloat(v.commission.commission_rates.max_rate) * 100).toFixed(2)}%</p>
           <p><strong title='Variazione massima della commissione in 24h'>Max Change (24h):</strong> ${(parseFloat(v.commission.commission_rates.max_change_rate) * 100).toFixed(2)}%</p>
