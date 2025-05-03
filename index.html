@@ -30,7 +30,7 @@
     .social-icons img {
       width: 20px;
       height: 20px;
-      filter: invert(100%); /* renderizza le icone bianche */
+      filter: invert(100%);
     }
     nav a {
       color: #bbb;
@@ -51,7 +51,131 @@
       display: flex;
       align-items: center;
     }
-  </style>
+    .validator-data {
+      text-align: left;
+      margin-top: 15px;
+      font-size: 0.9em;
+      background: #2a2a2a;
+      padding: 10px 15px;
+      border-radius: 8px;
+      color: #0f0;
+      font-family: monospace;
+      box-shadow: inset 0 0 5px #000;
+    }
+    .validator-data p {
+      margin: 8px 0;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+    .validators {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2em;
+      margin-top: 2em;
+    }
+    .validator-card {
+      background-color: #1e1e1e;
+      padding: 1.5em;
+      border-radius: 12px;
+      width: 420px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+    .validator-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .chain-logo {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 1em;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1em;
+      padding: 0.6em 1.2em;
+      background-color: #1f75fe;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .btn:hover {
+      background-color: #5599ff;
+    }
+  
+    .highlight {
+      animation: glow 1.5s ease-in-out;
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 0px #0f0; }
+      50% { box-shadow: 0 0 20px #0f0; }
+      100% { box-shadow: 0 0 0px #0f0; }
+    }
+
+    .validator-data [title] {
+      position: relative;
+      cursor: help;
+    }
+
+    .validator-data [title]:hover::after {
+      content: attr(title);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      white-space: nowrap;
+      background: #333;
+      color: #fff;
+      padding: 4px 8px;
+      font-size: 0.8em;
+      border-radius: 4px;
+      margin-top: 4px;
+      z-index: 10;
+    }
+
+
+.banner-typewriter {
+  font-family: monospace;
+  font-size: 1.3em;
+  margin: 1em auto 0.5em;
+  color: #1f75fe;
+  text-align: center;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { color: transparent }
+  50% { color: #1f75fe }
+}
+
+
+.banner-typewriter {
+  font-family: monospace;
+  font-size: 1.3em;
+  margin: 1em auto 0.5em;
+  color: #1f75fe;
+  text-align: center;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+</style>
 </head>
 <body>
   <header>
@@ -74,26 +198,194 @@
       <a href="https://snapshot.safeblock.space" target="_blank">Snapshots</a>
     </nav>
   </header>
+
+<div class="banner-typewriter">
+  <span id="typewriter-text"></span><span class="cursor">|</span>
+</div>
+
   <main>
-    <h1>Benvenuti</h1>
-    <p>Questa è la nostra pagina per validatori <strong>Safe Block</strong>.</p>
+    <h1>Safe Block Validators</h1>
     <div class="validators">
-      <div class="validator-card">
+      <div class="validator-card" id="bitsong-card">
         <img src="https://raw.githubusercontent.com/cosmos/chain-registry/master/bitsong/images/btsg.png" alt="BitSong Logo" class="chain-logo">
-        <h2>Safe Block</h2>
-        <p>Chain: BitSong</p>
-        <a href="https://restake.app/bitsong/bitsongvaloper1fgmzy5rtvvnxzy0vn54mz9k5xndzt2afepyye3/stake" class="btn" target="_blank">Delegare</a>
+        <h2>BitSong</h2>
+        <a href="https://restake.app/bitsong/bitsongvaloper1fgmzy5rtvvnxzy0vn54mz9k5xndzt2afepyye3/stake" class="btn" target="_blank">Delegate Now</a>
+        <div class="validator-data" id="bitsong-data">Caricamento dati...</div>
       </div>
-      <div class="validator-card">
+      <div class="validator-card" id="planq-card">
         <img src="https://raw.githubusercontent.com/cosmos/chain-registry/master/planq/images/planq.png" alt="Planq Logo" class="chain-logo">
-        <h2>Safe Block</h2>
-        <p>Chain: Planq</p>
-        <a href="https://restake.app/planq/plqvaloper1r3j34ch40555kgukc7xy8u45jnr3rnpapslpk7/stake" class="btn" target="_blank">Delegare</a>
+        <h2>Planq</h2>
+        <a href="https://restake.app/planq/plqvaloper1r3j34ch40555kgukc7xy8u45jnr3rnpapslpk7/stake" class="btn" target="_blank">Delegate Now</a>
+        <div class="validator-data" id="planq-data">Caricamento dati...</div>
       </div>
     </div>
   </main>
   <footer>
     <p>&copy; 2025 Safe Block</p>
   </footer>
+  
+  
+  <script>
+    async function fetchValidatorData(apiUrl, elementId, decimals = 6) {
+      try {
+        const res = await fetch(apiUrl);
+        const data = await res.json();
+        const v = data.validator;
+
+        const tokens = (parseFloat(v.tokens) / Math.pow(10, decimals)).toLocaleString("it-IT", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        });
+
+        const statusText = v.status === "BOND_STATUS_BONDED" ? "Online ✅" : "Offline ❌";
+
+        const date = new Date(v.commission.update_time);
+        const formattedDate = date.toLocaleString("it-IT", {
+          dateStyle: "medium",
+          timeStyle: "short"
+        });
+
+        const html = `
+          <p><strong title='Indirizzo validatore'>Operator:</strong> ${v.operator_address}</p>
+          <p><strong title='Se true, il validatore è stato escluso temporaneamente'>Jailed:</strong> ${v.jailed}</p>
+          <p><strong title='Stato attuale del validatore'>Status:</strong> ${statusText}</p>
+          <p><strong title='Token delegati al validatore'>Tokens:</strong> ${tokens} delegati</p>
+          <p><strong title='Commissione attuale trattenuta'>Commission:</strong> ${(parseFloat(v.commission.commission_rates.rate) * 100).toFixed(2)}%</p>
+          <p><strong title='Massima commissione impostabile'>Max Commission:</strong> ${(parseFloat(v.commission.commission_rates.max_rate) * 100).toFixed(2)}%</p>
+          <p><strong title='Variazione massima della commissione in 24h'>Max Change (24h):</strong> ${(parseFloat(v.commission.commission_rates.max_change_rate) * 100).toFixed(2)}%</p>
+          <p><strong title='Ultimo aggiornamento della commissione'>Last Update:</strong> ${formattedDate}</p>
+        `;
+        const card = document.getElementById(elementId);
+        card.innerHTML = html;
+
+        if (v.status === "BOND_STATUS_BONDED") {
+          card.parentElement.classList.add("highlight");
+          setTimeout(() => {
+            card.parentElement.classList.remove("highlight");
+          }, 2000);
+        }
+      } catch (err) {
+        document.getElementById(elementId).innerHTML = "<p style='color:red'>Errore nel caricamento dati.</p>";
+      }
+    }
+
+    fetchValidatorData(
+      "https://api.bitsong.safeblock.space/cosmos/staking/v1beta1/validators/bitsongvaloper1fgmzy5rtvvnxzy0vn54mz9k5xndzt2afepyye3",
+      "bitsong-data",
+      6
+    );
+    fetchValidatorData(
+      "https://api.planq.safeblock.space/cosmos/staking/v1beta1/validators/plqvaloper1r3j34ch40555kgukc7xy8u45jnr3rnpapslpk7",
+      "planq-data",
+      18
+    );
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".validator-card");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, { threshold: 0.1 });
+      cards.forEach(card => observer.observe(card));
+    });
+  
+
+const phrases = [
+  "You are delegating to Safe Block...",
+  "Secure. Reliable. Automatic.",
+  "Restake included, gas on us.",
+  "BitSong and Planq... validated in style."
+];
+
+let currentPhrase = 0;
+let currentChar = 0;
+const textElement = document.getElementById("typewriter-text");
+
+function typeNextChar() {
+  if (currentChar < phrases[currentPhrase].length) {
+    textElement.textContent += phrases[currentPhrase].charAt(currentChar);
+    currentChar++;
+    setTimeout(typeNextChar, 50);
+  } else {
+    setTimeout(erasePhrase, 2000);
+  }
+}
+
+function erasePhrase() {
+  if (currentChar > 0) {
+    textElement.textContent = phrases[currentPhrase].substring(0, currentChar - 1);
+    currentChar--;
+    setTimeout(erasePhrase, 25);
+  } else {
+    currentPhrase = (currentPhrase + 1) % phrases.length;
+    setTimeout(typeNextChar, 400);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  typeNextChar();
+});
+
+</script>
+
+
+
+
+
+
+<script>
+  const phrases = [
+    "You are delegating to Safe Block...",
+    "Secure. Reliable. Automatic.",
+    "Restake included, gas on us.",
+    "BitSong and Planq... validated in style."
+  ];
+
+  let i = 0, j = 0, currentPhrase = [], isDeleting = false, isEnd = false;
+
+  function loop() {
+    document.getElementById("typewriter-text").innerHTML = currentPhrase.join('');
+
+    if (i < phrases.length) {
+      if (!isDeleting && j <= phrases[i].length) {
+        currentPhrase.push(phrases[i][j]);
+        j++;
+        document.getElementById("typewriter-text").innerHTML = currentPhrase.join('');
+      }
+
+      if (isDeleting && j <= phrases[i].length) {
+        currentPhrase.pop();
+        j--;
+        document.getElementById("typewriter-text").innerHTML = currentPhrase.join('');
+      }
+
+      if (j === phrases[i].length) {
+        isEnd = true;
+        isDeleting = true;
+      }
+
+      if (isDeleting && j === 0) {
+        currentPhrase = [];
+        isDeleting = false;
+        i++;
+        if (i === phrases.length) {
+          i = 0;
+        }
+      }
+    }
+
+    const speedUp = Math.random() * (80 - 50) + 50;
+    const normalSpeed = Math.random() * (150 - 100) + 100;
+    const time = isEnd ? 1500 : isDeleting ? speedUp : normalSpeed;
+    isEnd = false;
+    setTimeout(loop, time);
+  }
+
+  document.addEventListener("DOMContentLoaded", loop);
+</script>
+
 </body>
 </html>

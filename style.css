@@ -7,30 +7,9 @@ body {
   text-align: center;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1em 2em;
-  background-color: #121212;
-}
-
-header .logo {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-nav a {
-  color: #bbb;
-  margin-left: 15px;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #fff;
-}
-
 main {
   padding: 2em 1em;
+  flex: 1;
 }
 
 .validators {
@@ -77,14 +56,9 @@ footer {
   color: #777;
 }
 
-
 html, body {
   height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
-}
-
-main {
-  flex: 1;
 }
