@@ -62,3 +62,173 @@ html, body {
   display: flex;
   flex-direction: column;
 }
+
+
+/* CSS importato da <style> in index.html */
+.logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-img {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-left: 10px;
+    }
+    .social-icons img {
+      width: 20px;
+      height: 20px;
+      filter: invert(100%);
+    }
+    nav a {
+      color: #bbb;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em 2em;
+      background-color: #121212;
+      flex-wrap: wrap;
+    }
+    .left-header {
+      display: flex;
+      align-items: center;
+    }
+    .validator-data {
+      text-align: left;
+      margin-top: 15px;
+      font-size: 0.9em;
+      background: #2a2a2a;
+      padding: 10px 15px;
+      border-radius: 8px;
+      color: #0f0;
+      font-family: monospace;
+      box-shadow: inset 0 0 5px #000;
+    }
+    .validator-data p {
+      margin: 8px 0;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+    .validators {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2em;
+      margin-top: 2em;
+    }
+    .validator-card {
+      background-color: #1e1e1e;
+      padding: 1.5em;
+      border-radius: 12px;
+      width: 420px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+    .validator-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .chain-logo {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 1em;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1em;
+      padding: 0.6em 1.2em;
+      background-color: #1f75fe;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .btn:hover {
+      background-color: #5599ff;
+    }
+  
+    .highlight {
+      animation: glow 1.5s ease-in-out;
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 0px #0f0; }
+      50% { box-shadow: 0 0 20px #0f0; }
+      100% { box-shadow: 0 0 0px #0f0; }
+    }
+
+    .validator-data [title] {
+      position: relative;
+      cursor: help;
+    }
+
+    .validator-data [title]:hover::after {
+      content: attr(title);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      white-space: nowrap;
+      background: #333;
+      color: #fff;
+      padding: 4px 8px;
+      font-size: 0.8em;
+      border-radius: 4px;
+      margin-top: 4px;
+      z-index: 10;
+    }
+
+
+.banner-typewriter {
+  font-family: monospace;
+  font-size: 1.3em;
+  margin: 1em auto 0.5em;
+  color: #1f75fe;
+  text-align: center;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { color: transparent }
+  50% { color: #1f75fe }
+}
+
+
+.banner-typewriter {
+  font-family: monospace;
+  font-size: 1.3em;
+  margin: 1em auto 0.5em;
+  color: #1f75fe;
+  text-align: center;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
