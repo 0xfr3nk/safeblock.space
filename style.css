@@ -231,21 +231,27 @@ h1, .page-title { text-align: center; }
   font-size: 0.85rem;
 }
 
-@media (max-width: 560px){
+/* --- Responsive Fix for Smartphone --- */
+@media (max-width: 768px){
+  html, body { overflow-x: hidden; } /* Evita scorrimento orizzontale */
   .validators {
     grid-template-columns: 1fr;
-    padding: 0 16px; /* margine interno simmetrico */
-  }
-  .validator-card {
-    margin: 0 auto; /* centra la card */
+    padding: 0 16px; /* margini uguali a sinistra e destra */
     width: 100%;
   }
+
+  .validator-card {
+    margin: 0 auto;
+    width: 100%;
+  }
+
   .btn-row .btn {
     min-width: 70px;
     padding: 6px 6px;
     font-size: 0.8rem;
   }
 }
+
 
 /* ====== NEW: APR badge accanto al nome rete ====== */
 .apr-badge{
