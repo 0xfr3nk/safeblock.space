@@ -1,52 +1,86 @@
-
 <!DOCTYPE html>
-
 <html lang="it">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Safe Block - Validators</title>
-<link href="style.css" rel="stylesheet"/>
-
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Safe Block - Validators</title>
+  <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
 <header>
-<div class="left-header">
-<div class="logo-container">
-<img alt="Safe Block Logo" class="logo-img" src="https://raw.githubusercontent.com/cosmostation/chainlist/main/chain/bitsong/moniker/bitsongvaloper1fgmzy5rtvvnxzy0vn54mz9k5xndzt2afepyye3.png"/>
-<div class="logo">SAFE BLOCK</div>
-</div>
-<div class="social-icons">
-<a href="https://t.me/z0xfr3nk" target="_blank">
-<img alt="Telegram" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg"/>
-</a>
-<a href="https://x.com/safeblockspace" target="_blank">
-<img alt="Twitter" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg"/>
-</a>
-</div>
-</div>
-<nav>
-<a href="https://docs.safeblock.space" target="_blank">Docs</a>
-</nav>
+  <div class="left-header">
+    <div class="logo-container">
+      <img alt="Safe Block Logo" class="logo-img" src="https://raw.githubusercontent.com/cosmostation/chainlist/main/chain/bitsong/moniker/bitsongvaloper1fgmzy5rtvvnxzy0vn54mz9k5xndzt2afepyye3.png"/>
+      <div class="logo">SAFE BLOCK</div>
+    </div>
+    <div class="social-icons">
+      <a href="https://t.me/z0xfr3nk" target="_blank">
+        <img alt="Telegram" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg"/>
+      </a>
+      <a href="https://x.com/safeblockspace" target="_blank">
+        <img alt="Twitter" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg"/>
+      </a>
+    </div>
+  </div>
+  <nav>
+    <a href="https://docs.safeblock.space" target="_blank">Docs</a>
+  </nav>
 </header>
+
 <div class="banner-typewriter">
-<span id="typewriter-text"></span><span class="cursor">|</span>
+  <span id="typewriter-text"></span><span class="cursor">|</span>
 </div>
+
 <main>
-<h1>Safe Block Validators</h1>
-<div class="validators">
-<div class="validator-card" id="bitsong-card">
-<div class="logo-wrap"><div class="logo-left"><img alt="BitSong Logo" class="chain-logo" src="https://raw.githubusercontent.com/cosmos/chain-registry/master/bitsong/images/btsg.png"/><span class="chain-name">BitSong Network</span></div><span class="token-symbol">$BTSG</span></div>
-<div class="btn-row"><a class="btn" href="https://restake.app/bitsong/bitsongvaloper1fgmzy5rtvvnxzy0vn54mz9k5xndzt2afepyye3/stake" target="_blank">Delegate</a><a class="btn" href="https://explorer.chainroot.io/bitsong/validators/bitsongvaloper1fgmzy5rtvvnxzy0vn54mz9k5xndzt2afepyye3" target="_blank" rel="noopener noreferrer">Explorer</a><a class="btn" href="https://snapshot.safeblock.space/bitsong" target="_blank" rel="noopener noreferrer">Snapshot</a><a class="btn" href="https://rpc.bitsong.safblock.space" target="_blank" rel="noopener noreferrer">RPC</a><a class="btn" href="https://api.bitsong.safeblock.space/swagger/" target="_blank" rel="noopener noreferrer">API</a></div>
-<div class="validator-data" id="bitsong-data">Caricamento dati...</div>
-</div>
-<div class="validator-card" id="planq-card">
-<div class="logo-wrap"><div class="logo-left"><img alt="Planq Logo" class="chain-logo" src="https://raw.githubusercontent.com/cosmos/chain-registry/master/planq/images/planq.png"/><span class="chain-name">Planq Network</span></div><span class="token-symbol">$PLQ</span></div>
-<div class="btn-row"><a class="btn" href="https://restake.app/planq/plqvaloper1r3j34ch40555kgukc7xy8u45jnr3rnpapslpk7/stake" target="_blank">Delegate</a><a class="btn" href="https://explorer.chainroot.io/planq/validators/plqvaloper1r3j34ch40555kgukc7xy8u45jnr3rnpapslpk7" target="_blank" rel="noopener noreferrer">Explorer</a><a class="btn" href="https://snapshot.safeblock.space/planq" target="_blank" rel="noopener noreferrer">Snapshot</a><a class="btn" href="https://rpc.planq.safblock.space" target="_blank" rel="noopener noreferrer">RPC</a><a class="btn" href="https://api.planq.safeblock.space/swagger/" target="_blank" rel="noopener noreferrer">API</a></div>
-<div class="validator-data" id="planq-data">Caricamento dati...</div>
-</div>
-</div>
+  <h1>Safe Block Validators</h1>
+
+  <div class="validators">
+    <!-- BitSong -->
+    <div class="validator-card" id="bitsong-card">
+      <div class="logo-wrap">
+        <div class="logo-left">
+          <img alt="BitSong Logo" class="chain-logo" src="https://raw.githubusercontent.com/cosmos/chain-registry/master/bitsong/images/btsg.png"/>
+          <span class="chain-name">BitSong Network</span>
+          <!-- Badge APR iniettato via JS -->
+        </div>
+        <span class="token-symbol">$BTSG</span>
+      </div>
+
+      <div class="btn-row">
+        <a class="btn" href="https://restake.app/bitsong/bitsongvaloper1fgmzy5rtvvnxzy0vn54mz9k5xndzt2afepyye3/stake" target="_blank">Delegate</a>
+        <a class="btn" href="https://explorer.chainroot.io/bitsong/validators/bitsongvaloper1fgmzy5rtvvnxzy0vn54mz9k5xndzt2afepyye3" target="_blank" rel="noopener noreferrer">Explorer</a>
+        <a class="btn" href="https://snapshot.safeblock.space/bitsong" target="_blank" rel="noopener noreferrer">Snapshot</a>
+        <a class="btn" href="https://rpc.bitsong.safblock.space" target="_blank" rel="noopener noreferrer">RPC</a>
+        <a class="btn" href="https://api.bitsong.safeblock.space/swagger/" target="_blank" rel="noopener noreferrer">API</a>
+      </div>
+
+      <div class="validator-data" id="bitsong-data">Caricamento dati...</div>
+    </div>
+
+    <!-- Planq -->
+    <div class="validator-card" id="planq-card">
+      <div class="logo-wrap">
+        <div class="logo-left">
+          <img alt="Planq Logo" class="chain-logo" src="https://raw.githubusercontent.com/cosmos/chain-registry/master/planq/images/planq.png"/>
+          <span class="chain-name">Planq Network</span>
+          <!-- Badge APR iniettato via JS -->
+        </div>
+        <span class="token-symbol">$PLQ</span>
+      </div>
+
+      <div class="btn-row">
+        <a class="btn" href="https://restake.app/planq/plqvaloper1r3j34ch40555kgukc7xy8u45jnr3rnpapslpk7/stake" target="_blank">Delegate</a>
+        <a class="btn" href="https://explorer.chainroot.io/planq/validators/plqvaloper1r3j34ch40555kgukc7xy8u45jnr3rnpapslpk7" target="_blank" rel="noopener noreferrer">Explorer</a>
+        <a class="btn" href="https://snapshot.safeblock.space/planq" target="_blank" rel="noopener noreferrer">Snapshot</a>
+        <a class="btn" href="https://rpc.planq.safblock.space" target="_blank" rel="noopener noreferrer">RPC</a>
+        <a class="btn" href="https://api.planq.safeblock.space/swagger/" target="_blank" rel="noopener noreferrer">API</a>
+      </div>
+
+      <div class="validator-data" id="planq-data">Caricamento dati...</div>
+    </div>
+  </div>
 </main>
+
 <footer class="site-footer">
   <div class="inner">
     <span>© 2025</span>
@@ -54,5 +88,127 @@
   </div>
 </footer>
 
-<script src="script.js"></script></body>
+<script src="script.js"></script>
+
+<!-- === SOLO BADGE APR BitSong (netto 5% commissione) === -->
+<script>
+(async function injectBitsongAPR(){
+  const CARD = document.getElementById('bitsong-card');
+  if (!CARD) return;
+
+  const BASE = 'https://api.bitsong.safeblock.space';
+  const COMMISSION = 0.05; // 5% tue commissioni
+
+  try {
+    const [inf, sup, pool, dist] = await Promise.all([
+      fetch(`${BASE}/cosmos/mint/v1beta1/inflation`).then(r=>r.json()),
+      fetch(`${BASE}/cosmos/bank/v1beta1/supply/by_denom?denom=ubtsg`).then(r=>r.json()),
+      fetch(`${BASE}/cosmos/staking/v1beta1/pool`).then(r=>r.json()),
+      fetch(`${BASE}/cosmos/distribution/v1beta1/params`).then(r=>r.json()),
+    ]);
+
+    const inflation = parseFloat(inf?.inflation ?? '0');
+    const supply    = parseFloat(sup?.amount?.amount ?? '0');
+    const bonded    = parseFloat(pool?.pool?.bonded_tokens ?? '0');
+    const communityTax = parseFloat(dist?.params?.community_tax ?? '0');
+
+    if (!inflation || !supply || !bonded) throw new Error('Dati APR non disponibili');
+
+    const bondedRatio = bonded / supply;
+    const aprGross = (inflation / bondedRatio) * (1 - communityTax);
+    const aprNet = aprGross * (1 - COMMISSION);
+    const aprPct = aprNet * 100;
+
+    const logoLeft = CARD.querySelector('.logo-left');
+    if (logoLeft && !CARD.querySelector('.apr-badge')) {
+      const badge = document.createElement('span');
+      badge.className = 'apr-badge';
+      badge.title = 'APR delegatori (netto commissione 5%)';
+      badge.textContent = `${aprPct.toFixed(2)}% APR`;
+      logoLeft.appendChild(badge);
+    }
+  } catch (e) {
+    console.error('APR BitSong:', e);
+    const logoLeft = document.querySelector('#bitsong-card .logo-left');
+    if (logoLeft && !document.querySelector('#bitsong-card .apr-badge')) {
+      const badge = document.createElement('span');
+      badge.className = 'apr-badge error';
+      badge.textContent = 'APR n/d';
+      logoLeft.appendChild(badge);
+    }
+  }
+})();
+</script>
+
+<!-- === SOLO BADGE APR Planq (netto 5% commissione, denom a 18 decimali) === -->
+<script>
+(async function injectPlanqAPR(){
+  const CARD = document.getElementById('planq-card');
+  if (!CARD) return;
+
+  const BASE = 'https://api.planq.safeblock.space';
+  const COMMISSION = 0.05; // 5% tue commissioni
+
+  // helper robusto per leggere la supply del bond_denom
+  async function getSupplyAmount(denom){
+    // tenta l'endpoint by_denom (preferibile)
+    try {
+      const byden = await fetch(`${BASE}/cosmos/bank/v1beta1/supply/by_denom?denom=${encodeURIComponent(denom)}`).then(r=>r.json());
+      const amt = parseFloat(byden?.amount?.amount ?? 'NaN');
+      if (!Number.isNaN(amt)) return amt;
+    } catch(_) {}
+    // fallback: lista completa, cerco il denom esatto
+    const list = await fetch(`${BASE}/cosmos/bank/v1beta1/supply`).then(r=>r.json());
+    const hit = (list?.supply || []).find(x => x?.denom === denom);
+    return parseFloat(hit?.amount ?? '0');
+  }
+
+  try {
+    // prendo bond_denom per essere sicuri del denom base (18 decimali)
+    const params = await fetch(`${BASE}/cosmos/staking/v1beta1/params`).then(r=>r.json());
+    const bondDenom = params?.params?.bond_denom;
+    if (!bondDenom) throw new Error('bond_denom assente');
+
+    // dati necessari
+    const [inf, pool, dist] = await Promise.all([
+      fetch(`${BASE}/cosmos/mint/v1beta1/inflation`).then(r=>r.json()),
+      fetch(`${BASE}/cosmos/staking/v1beta1/pool`).then(r=>r.json()),
+      fetch(`${BASE}/cosmos/distribution/v1beta1/params`).then(r=>r.json()),
+    ]);
+
+    const inflation = parseFloat(inf?.inflation ?? '0');
+    const bonded    = parseFloat(pool?.pool?.bonded_tokens ?? '0');
+    const communityTax = parseFloat(dist?.params?.community_tax ?? '0');
+
+    const supply = await getSupplyAmount(bondDenom);
+
+    if (!inflation || !supply || !bonded) throw new Error('Dati APR non disponibili');
+
+    // NB: supply e bonded sono nello stesso denom base (18 decimali) -> il rapporto cancella le scale
+    const bondedRatio = bonded / supply;
+    const aprGross = (inflation / bondedRatio) * (1 - communityTax);
+    const aprNet = aprGross * (1 - COMMISSION);
+    const aprPct = aprNet * 100;
+
+    const logoLeft = CARD.querySelector('.logo-left');
+    if (logoLeft && !CARD.querySelector('.apr-badge')) {
+      const badge = document.createElement('span');
+      badge.className = 'apr-badge';
+      badge.title = 'APR delegatori (netto commissione 5%)';
+      badge.textContent = `${aprPct.toFixed(2)}% APR`;
+      logoLeft.appendChild(badge);
+    }
+  } catch (e) {
+    console.error('APR Planq:', e);
+    const logoLeft = document.querySelector('#planq-card .logo-left');
+    if (logoLeft && !document.querySelector('#planq-card .apr-badge')) {
+      const badge = document.createElement('span');
+      badge.className = 'apr-badge error';
+      badge.textContent = 'APR n/d';
+      logoLeft.appendChild(badge);
+    }
+  }
+})();
+</script>
+</body>
 </html>

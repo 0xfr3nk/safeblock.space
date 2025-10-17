@@ -1,4 +1,3 @@
-
 :root{
   --bg:#0c0c0f;
   --card:#14141b;
@@ -125,10 +124,8 @@ main{max-width:1100px; margin:0 auto; padding:12px 20px 40px}
   border-color: rgba(122,162,255,.45);
 }
 
-
 /* Center the main page title and the typewriter banner */
 h1, .page-title { text-align: center; }
-
 .banner-typewriter { 
   text-align: center !important; 
   margin-left: auto; margin-right: auto; 
@@ -143,12 +140,11 @@ h1, .page-title { text-align: center; }
   background: transparent;
 }
 
-
 /* Align logo and network text side by side, maintaining left margin */
 .logo-wrap {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 12px;
   margin-bottom: 10px;
 }
@@ -164,7 +160,6 @@ h1, .page-title { text-align: center; }
   color: #fff;
   font-weight: normal;
 }
-
 
 /* Network row with token symbol aligned right */
 .logo-wrap {
@@ -187,7 +182,6 @@ h1, .page-title { text-align: center; }
   font-weight: 600;
   letter-spacing: 0.5px;
 }
-
 
 /* --- Centered, polished footer --- */
 .site-footer{
@@ -220,7 +214,6 @@ h1, .page-title { text-align: center; }
 .site-footer a{ color: var(--accent); text-decoration:none }
 .site-footer a:hover{ text-decoration:underline }
 
-
 /* Button container for delegate and explorer */
 .btn-row {
   display: flex;
@@ -238,18 +231,15 @@ h1, .page-title { text-align: center; }
   font-size: 0.85rem;
 }
 
-
 @media (max-width: 560px){
   .validators {
     grid-template-columns: 1fr;
     padding: 0 16px; /* margine interno simmetrico */
   }
-
   .validator-card {
     margin: 0 auto; /* centra la card */
     width: 100%;
   }
-
   .btn-row .btn {
     min-width: 70px;
     padding: 6px 6px;
@@ -257,4 +247,20 @@ h1, .page-title { text-align: center; }
   }
 }
 
-
+/* ====== NEW: APR badge accanto al nome rete ====== */
+.apr-badge{
+  display:inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: linear-gradient(180deg, rgba(38,194,129,.18), rgba(38,194,129,.08));
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  color: #bafbd6;
+  white-space: nowrap;
+}
+.apr-badge.error{
+  background: linear-gradient(180deg, rgba(255,107,107,.16), rgba(255,107,107,.06));
+  color: #ffd1d1;
+}
