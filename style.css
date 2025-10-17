@@ -109,7 +109,7 @@ main{max-width:1100px; margin:0 auto; padding:12px 20px 40px}
   display:inline-block;
   margin-top:10px;
   padding:8px 10px;
-  border-radius:12px;              /* soft-pill */
+  border-radius:7px;              /* soft-pill */
   border:1px solid rgba(255,255,255,.18);
   background:linear-gradient(180deg, rgba(122,162,255,.15), rgba(122,162,255,.05));
   color:var(--text);
@@ -240,22 +240,21 @@ h1, .page-title { text-align: center; }
 
 
 @media (max-width: 560px){
-  .validators{ grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); }
-  .btn-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: nowrap;
-  margin-top: 8px;
-}
+  .validators {
+    grid-template-columns: 1fr;
+    padding: 0 16px; /* margine interno simmetrico */
+  }
+
+  .validator-card {
+    margin: 0 auto; /* centra la card */
+    width: 100%;
+  }
+
   .btn-row .btn {
-  flex: 1;
-  text-align: center;
-  min-width: 80px;
-  padding: 6px 8px;
-  font-size: 0.85rem;
+    min-width: 70px;
+    padding: 6px 6px;
+    font-size: 0.8rem;
+  }
 }
-  .btn{ padding:6px 8px; font-size:0.85rem; }
-}
+
 

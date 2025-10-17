@@ -3,10 +3,10 @@
   const el = document.getElementById('typewriter-text');
   if(!el) return;
   const frasi = [
-    "You are delegating to Safe Block...",
+    "You are Delegating to Safe Block...",
     "Secure. Reliable. Automated.",
-    "Restake included, gas on us.",
-    "BitSong & Planq: validated with style."
+    "Restake Included, Gas on Us.",
+    "BitSong & Planq: Validated with Style."
   ];
   let pi = 0, ci = 0, dir = 1;
   function tick(){
